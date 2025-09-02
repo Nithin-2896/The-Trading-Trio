@@ -1,0 +1,263 @@
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: #111;
+  border-bottom: 2px solid #FFD700;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Branding Section (logo + name) */
+.branding {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Logo container with company name */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  max-width: 60px;  /* keep logo smaller so name is visible */
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo-img:hover {
+  transform: scale(1.05);
+}
+
+/* Company name styling */
+.company-name {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #FFD700; /* matches your gold theme */
+  letter-spacing: 1px;
+}
+
+
+/* Gold shimmer animation */
+@keyframes shine {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 300% 50%; }
+}
+
+/* Nav Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a { 
+  color: #FFD700; 
+  font-weight: bold; 
+}
+
+.nav-links li a.active,
+.nav-links li a:hover { 
+  color: #fff; 
+}
+/* Global */
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: #000;
+  color: #fff;
+  margin: 0;
+}
+
+a { 
+  text-decoration: none; 
+  color: inherit; 
+}
+
+.gold { 
+  color: #FFD700; 
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: #111;
+  border-bottom: 2px solid #FFD700;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a { 
+  color: #FFD700; 
+  font-weight: bold; 
+}
+
+.nav-links li a.active,
+.nav-links li a:hover { 
+  color: #fff; 
+}
+
+/* Logo Styling */
+.logo-img {
+  max-width: 150px;  /* Default size for desktops */
+  height: auto;
+  border-radius: 8px; /* Optional rounded edges */
+  transition: transform 0.3s ease-in-out;
+  display: block;
+}
+
+.logo-img:hover {
+  transform: scale(1.05); /* Subtle hover animation */
+}
+
+/* Company name next to logo (optional if used) */
+.company-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #f1c40f; /* Golden yellow matching theme */
+  margin-left: 10px;
+}
+
+/* Hero */
+.hero {
+  height: 90vh;
+  display: flex; 
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+  background: linear-gradient(180deg, #000, #111);
+  text-align: center;
+}
+
+.hero h1 { 
+  font-size: 3rem; 
+  color: #FFD700; 
+}
+
+.hero p { 
+  font-size: 1.2rem; 
+  color: #ccc; 
+  margin: 15px 0; 
+}
+
+/* Buttons */
+.btn-gold {
+  background: linear-gradient(90deg, #FFD700, #B8860B);
+  color: #000; 
+  padding: 12px 24px;
+  border-radius: 8px; 
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-gold:hover { 
+  box-shadow: 0 0 10px #FFD700; 
+}
+
+/* Features */
+.features { 
+  padding: 60px 20px; 
+  text-align: center; 
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px; 
+  margin-top: 40px;
+}
+
+.feature-card {
+  background: #111; 
+  padding: 20px;
+  border: 1px solid #FFD700;
+  border-radius: 10px;
+}
+
+.feature-card h3 { 
+  color: #FFD700; 
+}
+
+/* Page Header */
+.page-header { 
+  text-align: center; 
+  padding: 60px 20px; 
+}
+
+.page-header h1 { 
+  font-size: 2.5rem; 
+  color: #FFD700; 
+}
+
+/* Content */
+.content { 
+  max-width: 800px; 
+  margin: auto; 
+  padding: 40px 20px; 
+}
+
+.content p { 
+  line-height: 1.6; 
+  color: #ccc; 
+  margin-bottom: 20px; 
+}
+
+/* Contact Form */
+.contact-form {
+  display: flex; 
+  flex-direction: column;
+  gap: 15px; 
+  margin-top: 30px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px; 
+  border-radius: 6px;
+  border: none; 
+  outline: none;
+}
+
+.contact-form button { 
+  align-self: flex-start; 
+}
+
+/* Footer */
+footer {
+  background: #000; 
+  text-align: center;
+  padding: 20px; 
+  border-top: 2px solid #FFD700;
+  font-size: 14px; 
+  color: #888;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .feature-grid { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 2.2rem; }
+  .nav-links { flex-direction: column; gap: 10px; }
+  .logo-img { max-width: 120px; }
+}
+
+@media (max-width: 480px) {
+  .hero h1 { font-size: 1.8rem; }
+  .btn-gold { padding: 10px 20px; }
+  .logo-img { max-width: 100px; }
+}
