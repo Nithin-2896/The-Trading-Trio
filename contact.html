@@ -1,45 +1,426 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Trading Trio | Contact</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact The Trading Trio - Get in touch with our expert team for trading education, mentorship, and support. Multiple ways to reach us.">
+    <meta name="keywords" content="contact trading trio, trading support, get in touch, trading consultation">
+    <title>Contact Us - The Trading Trio | Get Expert Trading Support</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- AOS Animation Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <!-- Enhanced Styles -->
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-  <nav class="navbar">
-  <div class="branding">
-    <img src="images/logo.jpg" alt="The Trading Trio Logo" class="logo-img">
-    <span class="company-name">The Trading Trio</span>
-  </div>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="spinner"></div>
+    </div>
 
+    <!-- Enhanced Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="branding">
+            <a href="index.html" class="logo" aria-label="The Trading Trio Home">
+                <img src="./images/logo.jpg" alt="The Trading Trio Logo" class="logo-img">
+                <span class="company-name">The Trading Trio</span>
+            </a>
+        </div>
 
-  <section class="page-header">
-    <h1>Contact Us</h1>
-  </section>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
+        </ul>
 
-  <section class="content">
-    <p><strong>Address:</strong> 3rd Floor, Padmavathi Nilayam, 5-19/27/5/1, near KAN Gardens, Chandrampalem, Srinivasa Nagar, Madhurawada, Visakhapatnam, Andhra Pradesh 530048, India</p>
-    <p><strong>Phone:</strong> +91 91103 19373</p>
-    <p><strong>Email:</strong> info@thetradingtrio.com</p>
+        <div class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
 
-    <form class="contact-form">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit" class="btn-gold">Send Message</button>
-    </form>
-  </section>
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container" data-aos="fade-up">
+            <h1>Contact Us</h1>
+            <p>Ready to start your trading journey? Get in touch with our expert team today</p>
+        </div>
+    </section>
 
-  <footer>
-    <p>© 2025 The Trading Trio. All Rights Reserved.</p>
-  </footer>
+    <!-- Contact Section -->
+    <section class="content">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-bottom: 4rem;" class="contact-grid">
+
+                <!-- Contact Form -->
+                <div data-aos="fade-right">
+                    <h2 style="color: var(--primary-gold); margin-bottom: 1.5rem;">Send us a Message</h2>
+                    <p style="color: var(--text-secondary); margin-bottom: 2rem;">
+                        Fill out the form below and our team will get back to you within 24 hours. Let us know how we can help you achieve your trading goals.
+                    </p>
+
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="fullName" class="form-label">Full Name *</label>
+                            <input 
+                                type="text" 
+                                id="fullName" 
+                                name="fullName" 
+                                class="form-input" 
+                                required 
+                                placeholder="Enter your full name"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address *</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                class="form-input" 
+                                required 
+                                placeholder="Enter your email address"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input 
+                                type="tel" 
+                                id="phone" 
+                                name="phone" 
+                                class="form-input" 
+                                placeholder="Enter your phone number"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Subject *</label>
+                            <select id="subject" name="subject" class="form-input" required>
+                                <option value="">Select a subject</option>
+                                <option value="trading-education">Trading Education</option>
+                                <option value="mentorship">Personal Mentorship</option>
+                                <option value="strategies">Trading Strategies</option>
+                                <option value="analysis">Market Analysis</option>
+                                <option value="vip-package">VIP All-Access Package</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="support">Technical Support</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="experience" class="form-label">Trading Experience Level</label>
+                            <select id="experience" name="experience" class="form-input">
+                                <option value="">Select your level</option>
+                                <option value="beginner">Complete Beginner</option>
+                                <option value="some-knowledge">Some Knowledge</option>
+                                <option value="intermediate">Intermediate</option>
+                                <option value="advanced">Advanced</option>
+                                <option value="professional">Professional Trader</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message *</label>
+                            <textarea 
+                                id="message" 
+                                name="message" 
+                                class="form-textarea" 
+                                required 
+                                placeholder="Tell us about your trading goals, questions, or how we can help you..."
+                                rows="5"
+                            ></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label style="display: flex; align-items: center; gap: 0.5rem; color: var(--text-secondary); font-size: 0.9rem;">
+                                <input type="checkbox" required style="margin: 0;">
+                                I agree to the <a href="#" style="color: var(--primary-gold);">Privacy Policy</a> and <a href="#" style="color: var(--primary-gold);">Terms of Service</a>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-gold" style="width: 100%; justify-content: center; margin-top: 1rem;">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div data-aos="fade-left">
+                    <h2 style="color: var(--primary-gold); margin-bottom: 1.5rem;">Get in Touch</h2>
+                    <p style="color: var(--text-secondary); margin-bottom: 2rem;">
+                        We're here to help you succeed. Choose the method that works best for you to get in touch with our expert team.
+                    </p>
+
+                    <!-- Contact Methods -->
+                    <div style="display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 3rem;">
+                        <div class="contact-item" style="display: flex; align-items: center; gap: 1rem; padding: 1.5rem; background: var(--card-bg); border-radius: var(--radius-lg); border: 1px solid var(--border-color); transition: var(--transition-normal);">
+                            <div style="width: 50px; height: 50px; background: linear-gradient(135deg, var(--primary-gold), var(--secondary-gold)); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <i class="fas fa-envelope" style="color: var(--dark-bg); font-size: 1.2rem;"></i>
+                            </div>
+                            <div>
+                                <h4 style="color: var(--primary-gold); margin-bottom: 0.25rem;">Email Us</h4>
+                                <p style="margin: 0; color: var(--text-secondary);">info@thetradingtrio.com</p>
+                                <p style="margin: 0; color: var(--text-muted); font-size: 0.9rem;">Response within 24 hours</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item" style="display: flex; align-items: center; gap: 1rem; padding: 1.5rem; background: var(--card-bg); border-radius: var(--radius-lg); border: 1px solid var(--border-color); transition: var(--transition-normal);">
+                            <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #25D366, #128C7E); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <i class="fab fa-whatsapp" style="color: white; font-size: 1.2rem;"></i>
+                            </div>
+                            <div>
+                                <h4 style="color: var(--primary-gold); margin-bottom: 0.25rem;">WhatsApp</h4>
+                                <p style="margin: 0; color: var(--text-secondary);">+1 (555) 123-4567</p>
+                                <p style="margin: 0; color: var(--text-muted); font-size: 0.9rem;">Instant messaging support</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item" style="display: flex; align-items: center; gap: 1rem; padding: 1.5rem; background: var(--card-bg); border-radius: var(--radius-lg); border: 1px solid var(--border-color); transition: var(--transition-normal);">
+                            <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #5865F2, #4752C4); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <i class="fab fa-discord" style="color: white; font-size: 1.2rem;"></i>
+                            </div>
+                            <div>
+                                <h4 style="color: var(--primary-gold); margin-bottom: 0.25rem;">Discord Community</h4>
+                                <p style="margin: 0; color: var(--text-secondary);">Join our server</p>
+                                <p style="margin: 0; color: var(--text-muted); font-size: 0.9rem;">Chat with traders 24/7</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item" style="display: flex; align-items: center; gap: 1rem; padding: 1.5rem; background: var(--card-bg); border-radius: var(--radius-lg); border: 1px solid var(--border-color); transition: var(--transition-normal);">
+                            <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #1DA1F2, #0d8bd9); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <i class="fab fa-telegram" style="color: white; font-size: 1.2rem;"></i>
+                            </div>
+                            <div>
+                                <h4 style="color: var(--primary-gold); margin-bottom: 0.25rem;">Telegram</h4>
+                                <p style="margin: 0; color: var(--text-secondary);">@TradingTrioSupport</p>
+                                <p style="margin: 0; color: var(--text-muted); font-size: 0.9rem;">Real-time market alerts</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Business Hours -->
+                    <div style="background: linear-gradient(135deg, var(--card-bg) 0%, #1a1a1a 100%); padding: 2rem; border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+                        <h3 style="color: var(--primary-gold); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                            <i class="fas fa-clock"></i>
+                            Business Hours
+                        </h3>
+                        <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                            <div style="display: flex; justify-content: space-between; color: var(--text-secondary);">
+                                <span>Monday - Friday:</span>
+                                <span>9:00 AM - 6:00 PM EST</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; color: var(--text-secondary);">
+                                <span>Saturday:</span>
+                                <span>10:00 AM - 4:00 PM EST</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; color: var(--text-secondary);">
+                                <span>Sunday:</span>
+                                <span>Closed</span>
+                            </div>
+                            <hr style="border: none; border-top: 1px solid var(--border-color); margin: 1rem 0;">
+                            <div style="color: var(--primary-gold); font-weight: 600; text-align: center;">
+                                <i class="fas fa-headset"></i>
+                                24/7 Emergency Trading Support Available
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Location & Map Section -->
+            <div style="margin: 4rem 0;" data-aos="fade-up">
+                <h2 style="color: var(--primary-gold); text-align: center; margin-bottom: 2rem;">Visit Our Office</h2>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
+                    <div>
+                        <h3 style="color: var(--primary-gold); margin-bottom: 1rem;">The Trading Trio Headquarters</h3>
+                        <div style="display: flex; flex-direction: column; gap: 1rem;">
+                            <div style="display: flex; align-items: center; gap: 0.75rem;">
+                                <i class="fas fa-map-marker-alt" style="color: var(--primary-gold); width: 20px;"></i>
+                                <span style="color: var(--text-secondary);">123 Wall Street, Suite 500<br>New York, NY 10005</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 0.75rem;">
+                                <i class="fas fa-subway" style="color: var(--primary-gold); width: 20px;"></i>
+                                <span style="color: var(--text-secondary);">Near Wall Street Station (4, 5, 6 trains)</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 0.75rem;">
+                                <i class="fas fa-parking" style="color: var(--primary-gold); width: 20px;"></i>
+                                <span style="color: var(--text-secondary);">Parking available in building garage</span>
+                            </div>
+                        </div>
+
+                        <div style="margin-top: 2rem; padding: 1.5rem; background: var(--card-bg); border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+                            <h4 style="color: var(--primary-gold); margin-bottom: 1rem;">Office Visit Guidelines:</h4>
+                            <ul style="list-style: none; padding: 0; color: var(--text-secondary);">
+                                <li style="margin-bottom: 0.5rem;"><i class="fas fa-check" style="color: var(--primary-gold); margin-right: 0.5rem;"></i>Appointments preferred but walk-ins welcome</li>
+                                <li style="margin-bottom: 0.5rem;"><i class="fas fa-check" style="color: var(--primary-gold); margin-right: 0.5rem;"></i>Free 30-minute consultation for new clients</li>
+                                <li style="margin-bottom: 0.5rem;"><i class="fas fa-check" style="color: var(--primary-gold); margin-right: 0.5rem;"></i>Complimentary coffee and WiFi available</li>
+                                <li><i class="fas fa-check" style="color: var(--primary-gold); margin-right: 0.5rem;"></i>Private meeting rooms for consultations</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Map Placeholder -->
+                    <div style="background: var(--card-bg); border-radius: var(--radius-lg); border: 1px solid var(--border-color); height: 400px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;">
+                        <div style="text-align: center; color: var(--text-secondary);">
+                            <i class="fas fa-map" style="font-size: 4rem; color: var(--primary-gold); margin-bottom: 1rem;"></i>
+                            <h4 style="color: var(--primary-gold); margin-bottom: 0.5rem;">Interactive Map</h4>
+                            <p>Wall Street, Financial District<br>New York, NY</p>
+                            <a href="https://maps.google.com" target="_blank" class="btn btn-outline" style="margin-top: 1rem;">
+                                <i class="fas fa-external-link-alt"></i>
+                                Open in Google Maps
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Section -->
+            <div style="margin: 4rem 0;" data-aos="fade-up">
+                <h2 style="color: var(--primary-gold); text-align: center; margin-bottom: 2rem;">Common Questions</h2>
+                <div style="max-width: 800px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                    <div style="background: var(--card-bg); padding: 1.5rem; border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+                        <h4 style="color: var(--primary-gold); margin-bottom: 0.75rem;">How quickly do you respond?</h4>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem;">Email inquiries: Within 24 hours<br>WhatsApp/Telegram: Usually within 2-4 hours during business hours</p>
+                    </div>
+
+                    <div style="background: var(--card-bg); padding: 1.5rem; border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+                        <h4 style="color: var(--primary-gold); margin-bottom: 0.75rem;">Do you offer free consultations?</h4>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem;">Yes! We offer a complimentary 30-minute consultation to discuss your trading goals and how we can help.</p>
+                    </div>
+
+                    <div style="background: var(--card-bg); padding: 1.5rem; border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+                        <h4 style="color: var(--primary-gold); margin-bottom: 0.75rem;">Can I schedule a video call?</h4>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem;">Absolutely! We use Zoom, Skype, or Google Meet for video consultations. Just mention your preference in your message.</p>
+                    </div>
+
+                    <div style="background: var(--card-bg); padding: 1.5rem; border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+                        <h4 style="color: var(--primary-gold); margin-bottom: 0.75rem;">What languages do you support?</h4>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem;">English is our primary language, but we have team members who speak Spanish, French, and Mandarin.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section" style="background: linear-gradient(135deg, var(--card-bg) 0%, #0a0a0a 100%); padding: 4rem 0; text-align: center;">
+        <div class="container" data-aos="fade-up">
+            <h2 style="color: var(--primary-gold); margin-bottom: 1rem;">Don't Wait - Start Trading Successfully Today!</h2>
+            <p style="font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                Every day you wait is a day of potential profits lost. Contact us now and take the first step toward financial freedom.
+            </p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="#contactForm" class="btn btn-gold">
+                    <i class="fas fa-rocket"></i>
+                    Send Message Now
+                </a>
+                <a href="tel:+1" class="btn btn-outline">
+                    <i class="fas fa-phone"></i>
+                    Call Directly
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>The Trading Trio</h3>
+                    <p>Empowering traders to achieve financial independence through education, strategy, and mentorship.</p>
+                    <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+                        <a href="#" aria-label="Facebook" style="font-size: 1.2rem;"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter" style="font-size: 1.2rem;"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn" style="font-size: 1.2rem;"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Instagram" style="font-size: 1.2rem;"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About Us</a>
+                        <a href="services.html">Services</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact Methods</h3>
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                        <a href="mailto:info@thetradingtrio.com">Email Support</a>
+                        <a href="#">WhatsApp Chat</a>
+                        <a href="#">Discord Community</a>
+                        <a href="#">Telegram Channel</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Office Hours</h3>
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.9rem;">
+                        <p>Monday - Friday: 9 AM - 6 PM EST</p>
+                        <p>Saturday: 10 AM - 4 PM EST</p>
+                        <p>Sunday: Closed</p>
+                        <p style="color: var(--primary-gold); margin-top: 0.5rem;"><strong>24/7 Emergency Support</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 The Trading Trio. All rights reserved. | <a href="#" style="color: var(--primary-gold);">Privacy Policy</a> | <a href="#" style="color: var(--primary-gold);">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Enhanced JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="./js/script.js"></script>
+
+    <style>
+        .contact-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media (max-width: 968px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        .contact-item:hover {
+            transform: translateY(-2px);
+            border-color: var(--primary-gold);
+        }
+
+        .form-input:focus,
+        .form-textarea:focus {
+            border-color: var(--primary-gold);
+            box-shadow: 0 0 0 2px rgba(255, 215, 0, 0.2);
+        }
+
+        select.form-input {
+            cursor: pointer;
+        }
+    </style>
 </body>
 </html>

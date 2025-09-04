@@ -1,58 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Trading Trio | Home</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Trading Trio - Empowering traders to achieve financial independence through education, strategy, and mentorship. Born to Win.">
+    <meta name="keywords" content="trading, financial education, mentorship, investment, trading strategies">
+    <meta name="author" content="The Trading Trio">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="The Trading Trio - Born to Win">
+    <meta property="og:description" content="Empowering traders through education, strategy, and mentorship">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://thetradingtrio.com">
+    <meta property="og:image" content="assets/og-image.jpg">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The Trading Trio - Born to Win">
+    <meta name="twitter:description" content="Empowering traders through education, strategy, and mentorship">
+
+    <title>The Trading Trio - Empowering Traders | Born to Win</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- AOS Animation Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <!-- Enhanced Styles -->
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar">
-  <div class="branding">
-    <img src="images/logo.jpg" alt="The Trading Trio Logo" class="logo-img">
-    <span class="company-name">The Trading Trio</span>
-  </div>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
-
-
-  <!-- Hero -->
-  <header class="hero">
-    <h1>The Trading Trio</h1>
-    <p>Born to Win</p>
-    <a href="services.html" class="btn-gold">Explore Services</a>
-  </header>
-
-  <!-- Features -->
-  <section class="features">
-    <h2>Our Features</h2>
-    <div class="feature-grid">
-      <div class="feature-card">
-        <h3>Trading Education</h3>
-        <p>Learn the art of trading with structured programs.</p>
-      </div>
-      <div class="feature-card">
-        <h3>Market Insights</h3>
-        <p>Stay ahead with expert analysis and live updates.</p>
-      </div>
-      <div class="feature-card">
-        <h3>Mentorship</h3>
-        <p>Guidance from seasoned professionals in trading.</p>
-      </div>
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="spinner"></div>
     </div>
-  </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 The Trading Trio. All Rights Reserved.</p>
-  </footer>
+    <!-- Enhanced Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="branding">
+            <a href="index.html" class="logo" aria-label="The Trading Trio Home">
+                <img src="./images/logo.jpg" alt="The Trading Trio Logo" class="logo-img">
+                <span class="company-name">The Trading Trio</span>
+            </a>
+        </div>
 
-  <script src="js/main.js"></script>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Enhanced Hero Section -->
+    <section class="hero">
+        <div class="hero-content" data-aos="fade-up">
+            <h1>Born to Win</h1>
+            <p>Empowering traders to achieve financial independence through education, strategy, and mentorship.</p>
+            <div class="hero-buttons" data-aos="fade-up" data-aos-delay="300">
+                <a href="services.html" class="btn btn-gold">
+                    <i class="fas fa-rocket"></i>
+                    Get Started
+                </a>
+                <a href="about.html" class="btn btn-outline">
+                    <i class="fas fa-info-circle"></i>
+                    Learn More
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Why Choose The Trading Trio?</h2>
+                <p>We provide comprehensive trading education and mentorship to help you succeed in financial markets.</p>
+            </div>
+
+            <div class="feature-grid">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Expert Education</h3>
+                    <p>Learn from seasoned traders with years of market experience. Our comprehensive curriculum covers everything from basics to advanced strategies.</p>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Proven Strategies</h3>
+                    <p>Access time-tested trading strategies that have generated consistent profits. Learn risk management and portfolio optimization techniques.</p>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Personal Mentorship</h3>
+                    <p>Get one-on-one guidance from our expert mentors. Receive personalized feedback and support throughout your trading journey.</p>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Risk Management</h3>
+                    <p>Master the art of risk management with our proven techniques. Learn to protect your capital while maximizing profit potential.</p>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile Trading</h3>
+                    <p>Trade on the go with our mobile-optimized strategies and tools. Never miss an opportunity with real-time market alerts.</p>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="feature-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Proven Results</h3>
+                    <p>Join hundreds of successful traders who have transformed their financial lives. Track record of consistent performance and growth.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="stats-section" style="background: linear-gradient(135deg, #111 0%, #000 100%); padding: 4rem 0;">
+        <div class="container">
+            <div class="stats-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; text-align: center;">
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                    <div style="font-size: 3rem; font-weight: 700; color: var(--primary-gold); margin-bottom: 0.5rem;">500+</div>
+                    <p style="color: var(--text-secondary);">Successful Traders</p>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                    <div style="font-size: 3rem; font-weight: 700; color: var(--primary-gold); margin-bottom: 0.5rem;">95%</div>
+                    <p style="color: var(--text-secondary);">Success Rate</p>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                    <div style="font-size: 3rem; font-weight: 700; color: var(--primary-gold); margin-bottom: 0.5rem;">$2M+</div>
+                    <p style="color: var(--text-secondary);">Total Profits Generated</p>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="400">
+                    <div style="font-size: 3rem; font-weight: 700; color: var(--primary-gold); margin-bottom: 0.5rem;">24/7</div>
+                    <p style="color: var(--text-secondary);">Support Available</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section" style="background: var(--card-bg); padding: 4rem 0; text-align: center;">
+        <div class="container" data-aos="fade-up">
+            <h2 style="color: var(--primary-gold); margin-bottom: 1rem;">Ready to Transform Your Trading?</h2>
+            <p style="font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                Join thousands of successful traders who have already started their journey to financial freedom with The Trading Trio.
+            </p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="contact.html" class="btn btn-gold">
+                    <i class="fas fa-phone"></i>
+                    Contact Us Today
+                </a>
+                <a href="services.html" class="btn btn-outline">
+                    <i class="fas fa-eye"></i>
+                    View Our Services
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>The Trading Trio</h3>
+                    <p>Empowering traders to achieve financial independence through education, strategy, and mentorship.</p>
+                    <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+                        <a href="#" aria-label="Facebook" style="font-size: 1.2rem;"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter" style="font-size: 1.2rem;"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn" style="font-size: 1.2rem;"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Instagram" style="font-size: 1.2rem;"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About Us</a>
+                        <a href="services.html">Services</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                        <a href="services.html#trading-education">Trading Education</a>
+                        <a href="services.html#mentorship">Personal Mentorship</a>
+                        <a href="services.html#strategies">Trading Strategies</a>
+                        <a href="services.html#analysis">Market Analysis</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                        <p><i class="fas fa-envelope"></i> info@thetradingtrio.com</p>
+                        <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                        <p><i class="fas fa-map-marker-alt"></i> New York, NY</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 The Trading Trio. All rights reserved. | <a href="#" style="color: var(--primary-gold);">Privacy Policy</a> | <a href="#" style="color: var(--primary-gold);">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Enhanced JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>
